@@ -1,0 +1,18 @@
+name: Vogsphere
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  vogsphere:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Vogsphere Composite
+        uses: 42-Desoroxxx/Vogsphere-Composite@main
+        with:
+          normcheck: 'true'
